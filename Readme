@@ -1,0 +1,15 @@
+1- Replace the existing docker-compose.yml file under ohs-api-test/mac-m1 with the one inside the attached project root folder
+
+2- Open a terminal from the project root folder and run:
+mvn clean install
+
+3- Run:
+docker rm $(docker ps -a -q)
+
+4- Open a terminal from ohs-api-test/mac-m1 folder and run:
+docker-compose up
+
+5- From Postman, make a GET request to localhost:8090/api/processed_orders and wait for the response
+
+
+Every time you wanna run and test the app, do all the steps 3,4 and 5.
